@@ -4,7 +4,7 @@ def islower(c):
     return True
   else:
       return False
- 
+
 def uppercase(str):
   for c in str:
     print("{:c}"
