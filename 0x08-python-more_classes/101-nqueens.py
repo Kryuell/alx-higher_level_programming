@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3import sys
 import sys
 
 
@@ -62,10 +62,6 @@ def nqueens(n):
     """
     Solve the N Queens problem for a given N
     """
-    if not isinstance(n, int):
-        print("N must be a number")
-        sys.exit(1)
-
     if n < 4:
         print("N must be at least 4")
         sys.exit(1)
@@ -73,7 +69,7 @@ def nqueens(n):
     board = [[0 for _ in range(n)] for _ in range(n)]
     solutions = []
     solve_n_queens(board, 0, solutions)
-    print_solutions(solutions)
+    print_solutions(solutions[::-1])
 
 
 if __name__ == "__main__":
