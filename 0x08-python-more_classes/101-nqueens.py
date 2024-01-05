@@ -5,10 +5,12 @@ N Queens puzzle solution
 
 import sys
 
+
 def print_solution(board_size, solutions):
     """Print the solutions in the specified format"""
     for solution in solutions:
         print([[row, col] for row, col in enumerate(solution)])
+
 
 def is_safe(board, row, col):
     """Check if it's safe to place a queen at a given position"""
@@ -19,6 +21,7 @@ def is_safe(board, row, col):
             return False
     return True
 
+
 def solve_nqueens(board_size, row, board, solutions):
     """Recursively solve N Queens problem using backtracking"""
     if row == board_size:
@@ -28,6 +31,7 @@ def solve_nqueens(board_size, row, board, solutions):
             if is_safe(board, row, col):
                 board[row] = col
                 solve_nqueens(board_size, row + 1, board, solutions)
+
 
 def nqueens(N):
     """Main function to solve the N Queens problem"""
@@ -44,6 +48,7 @@ def nqueens(N):
     solutions = []
     solve_nqueens(N, 0, board, solutions)
     print_solution(N, solutions)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
