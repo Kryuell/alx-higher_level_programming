@@ -9,4 +9,5 @@ class MyInt(int):
 
     """Overrides inequality (!=) operator."""
     def __ne__(self, other):
+        """Overrides inequality (!=) operator."""
         return super().__eq__(other)
