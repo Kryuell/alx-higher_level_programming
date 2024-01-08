@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Class MyInt inherits from int with inverted == and != operators."""
 
+
 class MyInt(int):
     """Overrides equality (==) operator."""
     def __eq__(self, other):
