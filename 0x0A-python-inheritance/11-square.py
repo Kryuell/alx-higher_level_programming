@@ -2,8 +2,8 @@
 """
 Class Square inherits from Rectangle.
 """
-
 Rectangle = __import__('9-rectangle').Rectangle
+
 
 class Square(Rectangle):
     """Initializes a Square instance with size."""
