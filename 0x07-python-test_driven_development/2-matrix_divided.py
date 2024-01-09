@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module for matrix_divided method."""
+
+
 def matrix_divided(matrix, div):
     """
     Divides all elements of matrix by div.
@@ -32,7 +35,6 @@ def matrix_divided(matrix, div):
                 raise TypeError("matrix must be a matrix (list of lists) " +
                                 "of integers/floats")
     return [[round(x / div, 2) for x in row] for row in matrix]
-
 
 
 if __name__ == "__main__":
