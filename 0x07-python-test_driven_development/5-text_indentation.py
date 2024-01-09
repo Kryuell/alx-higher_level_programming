@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module for text_indentation method."""
 
 
 def text_indentation(text):
