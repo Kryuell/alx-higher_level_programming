@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Defines a class Student
+"""
+
 
 class Student:
     """
@@ -13,12 +17,25 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attrs=None):
-        """
-        Retrieves a dictionary representation of a Student instance based on provided attributes.
-        If attrs is a list of strings, only those attributes are retrieved.
-        Otherwise, all attributes are retrieved.
-        """
-        if attrs is not None and all(isinstance(attr, str) for attr in attrs):
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+
+def to_json(self, attrs=None):
+    """
+    Retrieves a dictionary representation of a Student instance
+    based on provided attributes.
+    If attrs is a list of strings, only those attributes are retrieved.
+    Otherwise, all attributes are retrieved.
+
+    Args:
+        attrs (list): List of strings representing the attributes to retrieve.
+
+    Returns:
+        dict: Dictionary representation of the Student instance.
+    """
+    if attrs is None:
         return self.__dict__
+
+    return {
+        attr: getattr(self, attr)
+        for attr in attrs
+        if isinstance(attr, str) and hasattr(self, attr)
+    }
