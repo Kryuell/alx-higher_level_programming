@@ -2,6 +2,7 @@
 """Rectangle class, inherits from Base."""
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle class, inherits from Base."""
 
@@ -104,8 +105,9 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
 
-    def to_dictionary(self):
-        """Return dictionary representation of Rectangle."""
-        return {key: getattr(self, key) for key in ('id', 'width', 'height', 'x', 'y')}
-
-    
+def to_dictionary(self):
+    """Return dictionary representation of Rectangle."""
+    return {
+        key: getattr(self, key)
+        for key in ('id', 'width', 'height', 'x', 'y')
+    }
