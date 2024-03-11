@@ -1,12 +1,12 @@
 #!/usr/bin/node
+// Prints x times 'C is fun'
 
-const lang = 'C is fun';
-
-const num = parseInt(process.argv[2]);
-if (isNaN(num) || num < 1) {
-  console.log('Missing number of occurrences');
+const args = process.argv;
+const num = parseInt(args[2], 10);
+if (isNaN(num)) {
+  console.log('Missing number of occurences');
 } else {
-  for (let i = 0; i < num; i++) {
-    console.log(lang);
+  for (let i = 0; i < args[2]; i++) {
+    console.log('C is fun');
   }
 }
